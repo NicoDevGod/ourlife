@@ -4,9 +4,16 @@ import { Chrono } from 'react-chrono';
 const items = [
   {
     title: "January 2022",
-    cardTitle: "Event 1",
-    cardSubtitle: "Event 1 Subtitle",
-    cardDetailedText: "This is the first event on the timeline.",
+    cardTitle: "Primera foto de ella",
+    cardSubtitle: "Recien comenzando a conocerse",
+    cardDetailedText: "Primera de muchas mas que vendrian.",
+    media: {
+      name: "dunkirk beach",
+      source: {
+        url: "https://firebasestorage.googleapis.com/v0/b/ourlife-cf4b8.appspot.com/o/Images%2F1.jpg?alt=media&token=dbc1a11a-b77c-44b6-96b8-463a2f2b8472"
+      },
+      type: "IMAGE"
+    }
   },
   {
     title: "February 2022",
@@ -77,13 +84,26 @@ const items = [
 ];
 
 const HorizontalTimeline = () => {
+
+
+
+  
   return (
+    <div className=''>
     <Chrono
       items={items}
+      theme={{
+        primary: 'red',
+        secondary: 'rose',
+        cardBgColor: 'white',
+        titleColor: 'black',
+        titleColorActive: 'red',
+        cardTitleColor: 'red'
+      }}
       mode="HORIZONTAL"
-      itemWidth={150}
-      showSingle
-    />
+
+      
+    /></div>
   );
 };
 
